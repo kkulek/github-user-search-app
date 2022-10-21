@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {colorPalette} from "../general/colorPallete";
+import {colorPalette} from "../../general/colorPallete";
 
 const MainContainer = styled.main`
   background-color: ${colorPalette.dark.veryDark};

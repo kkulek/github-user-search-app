@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import sun from "../img/icon-sun.svg"
+import sun from "../../img/icon-sun.svg"
 
 const Container = styled.div`
   display: flex;
