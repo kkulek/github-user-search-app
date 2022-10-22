@@ -5,14 +5,19 @@ import search from "../../img/icon-search.svg"
 
 const Bar = styled.nav`
   background-color: ${colorPalette.dark.dark};
-  //width: 100%;
-  padding: 4px;
+  padding: 4px 10px 4px 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-radius: 1rem;
-  height: 70px;
-  width: 573px;
+  max-height: 70px;
   align-items: center;
+`
+
+
+const Search = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
 `
 
 const Icon = styled.img`
@@ -20,6 +25,7 @@ const Icon = styled.img`
 `
 
 const Input = styled.input`
+  all: unset;
   color: ${colorPalette.dark.light};
   background-color: ${colorPalette.dark.dark};
 `
@@ -36,8 +42,10 @@ const Button = styled.button`
 export function SearchBar() {
     return (
         <Bar>
-            <Icon src={search} alt="search"></Icon>
-            <Input placeholder="Search GitHub username…"></Input>
+            <Search>
+                <Icon src={search} alt="search"></Icon>
+                <Input placeholder="Search GitHub username…"></Input>
+            </Search>
             <Button>Search</Button>
         </Bar>
     )
