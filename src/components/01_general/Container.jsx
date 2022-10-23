@@ -7,6 +7,7 @@ const ContainerElement = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin: 0 2rem;
   
   @media (min-width: 768px) {
     min-width: 573px;
