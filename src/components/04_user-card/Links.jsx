@@ -1,26 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import {Container} from "./Links.style";
 
-const Container = styled.footer`
-  display: flex;
-  flex-direction: column;
-  
-  @media (min-width: 568px) {
-    flex-direction: row;
-    gap: 3rem;
-  }
-`
-
-export function Links() {
+export function Links({location, blog, twitter, company}) {
     return (
         <Container>
             <ul>
-                <li>San Francisco</li>
-                <li>https://github.blog</li>
+                <li>{location !== null ? location : " "}</li>
+                <li>{blog !== null ? blog : " "}</li>
             </ul>
             <ul>
-                <li>twitter</li>
-                <li>@github</li>
+                <li>{twitter !== null ? twitter : " "}</li>
+                <li>{company !== null ? company : " "}</li>
             </ul>
         </Container>
     )

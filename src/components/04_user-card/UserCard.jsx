@@ -1,39 +1,52 @@
-import React from "react";
-import styled from "styled-components";
-import {colorPalette} from "../../general/colorPallete";
 import {Statistics} from "./Statistics";
 import {Links} from "./Links";
 import {BasicInfo} from "./BasicInfo";
 import {Avatar} from "./Avatar";
+import {Card, Div} from "./UserCard.style";
 
+export function UserCard({user, isLoaded}) {
+    const {
+        avatar_url,
+        name,
+        login,
+        created_at,
+        bio,
+        public_repos,
+        followers,
+        following,
+        location,
+        blog,
+        twitter_username,
+        company
+    }
+        = user
 
-
-const Card = styled.section`
-  background-color: ${colorPalette.dark.dark};
-  width: 100%;
-  min-height: 250px;
-  border-radius: 15px;
-  padding: 44px 48px;
-  display: flex;
-  gap: 3rem;
-`
-
-const Div = styled.div`
-    display: flex;
-  flex-direction: column;
-  gap: 2rem;
-`
-
-
-export function UserCard() {
     return (
-        <Card>
-            <Avatar/>
-            <Div>
-                <BasicInfo />
-                <Statistics/>
-                <Links />
-            </Div>
-        </Card>
+        <>
+            {isLoaded && user !== null ? (
+                <Card>
+                    <Avatar avatar={avatar_url}/>
+                    <Div>
+                        <BasicInfo
+                            name={name}
+                            login={login}
+                            created={created_at}
+                            bio={bio}
+                        />
+                        <Statistics
+                            repos={public_repos}
+                            followers={followers}
+                            following={following}
+                        />
+                        <Links
+                            location={location}
+                            blog={blog}
+                            twitter={twitter_username}
+                            company={company}
+                        />
+                    </Div>
+                </Card>
+            ) : (<></>)}
+        </>
     )
 }
