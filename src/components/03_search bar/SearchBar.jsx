@@ -2,7 +2,7 @@ import React from "react";
 import search from "../../img/icon-search.svg"
 import {Bar, Search, Icon, Input, Button} from "./SearchBar.style";
 
-export function SearchBar({onChange, onKeyUp, value}) {
+export function SearchBar({onChange, onKeyUp, value, onClick}) {
     return (
         <Bar>
             <Search>
@@ -13,7 +13,7 @@ export function SearchBar({onChange, onKeyUp, value}) {
                        value={value}
                 ></Input>
             </Search>
-            <Button>Search</Button>
+            <Button onClick={onClick}>Search</Button>
         </Bar>
     )
 }
