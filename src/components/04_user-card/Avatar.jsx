@@ -1,17 +1,12 @@
 import React from "react";
-import styled from "styled-components";
-import avatar from "../../img/avatar.png"
+import {AvatarImg} from "./Avatar.style";
 
-
-const AvatarImg = styled.img`
-  border-radius: 50%;
-  max-height: 117px;
-  max-width: 117px;
-
-`
-
-export function Avatar() {
+export function Avatar({user, isLoaded}) {
     return (
-        <AvatarImg src={avatar} alt="avatar"/>
+        <>
+            {isLoaded && user !== null ? (
+                <AvatarImg src={user.avatar_url} alt="avatar"/>
+            ) : ( <></> )}
+        </>
     )
 }
