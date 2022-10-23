@@ -11,11 +11,15 @@ const HeaderContainer = styled.header`
 
 const Logo = styled.h1`
   cursor: pointer;
-  font-size: 26px;
+  font-size: 22px;
   
   a {
     text-decoration: none;
     color: white;
+  }
+  
+  @media (min-width: 768px) {
+    font-size: 26px;
   }
 `
 
@@ -23,11 +27,12 @@ export function Header() {
     return (
         <HeaderContainer>
             <Logo>
-                <a href="https://google.com"
-                   target="_blank"
+                <a href="/"
                    rel="noreferrer"
                 >
-                    devfinder
+                    <h1>
+                        devfinder
+                    </h1>
                 </a>
             </Logo>
             <ThemeSwitch/>
