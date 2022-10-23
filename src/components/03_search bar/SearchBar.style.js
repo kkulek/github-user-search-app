@@ -20,7 +20,8 @@ export const Search = styled.div`
 `
 
 export const Icon = styled.img`
-
+  width: 100%;
+  height: 100%;
 `
 
 export const Input = styled.input`
@@ -28,7 +29,7 @@ export const Input = styled.input`
   color: ${colorPalette.dark.light};
   background-color: ${colorPalette.dark.dark};
   width: 100%;
-  
+
   &:focus {
     border-bottom: 1px solid ${colorPalette.dark.accent};
   }
