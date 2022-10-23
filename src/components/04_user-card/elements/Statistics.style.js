@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {colorPalette} from "../../general/colorPallete";
+import {colorPalette} from "../../../general/colorPallete";
 
 export const Container = styled.div`
   background-color: ${colorPalette.dark.veryDark};
