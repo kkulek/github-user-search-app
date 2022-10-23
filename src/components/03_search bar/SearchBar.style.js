@@ -43,8 +43,13 @@ export const Button = styled.button`
   font-size: 1rem;
   color: ${colorPalette.dark.white};
   border-radius: 10px;
-
+  transition: background-color 200ms;
+  
   @media (min-width: 768px) {
     padding: 1rem 1.5rem;
+  }
+  
+  &:hover {
+    background-color: ${colorPalette.dark.accentLight};
   }
 `
