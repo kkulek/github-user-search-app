@@ -1,49 +1,22 @@
-import React from "react";
-import styled from "styled-components";
-import {colorPalette} from "../../general/colorPallete";
+import Moment from "moment";
+import {Wrapper, Name, Date, Bio} from "./BasicInfo.style";
 
-const Name = styled.div`
-  h1 {
-    font-size: 26px;
-    margin-bottom: 0.5rem;
-  }
+export function BasicInfo({name, login, created, bio}) {
+    Moment.locale("en")
 
-  p {
-    color: ${colorPalette.dark.accent};
-  }
-`
-
-const Bio = styled.p`
-`
-
-const Date = styled.p`
-
-`
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-`
-
-
-export function BasicInfo() {
     return (
-        <div>
+        <article>
             <Wrapper>
                 <Name>
-                    <h1>The Octocat</h1>
-                    <p>@octocat</p>
+                    <h1>{name}</h1>
+                    <p>@{login}</p>
                 </Name>
                 <Date>
-                    Joined 25 Jan 2011
+                    Joined {Moment(created).format("DD MM YYYY")}
                 </Date>
             </Wrapper>
-            <Bio>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
-                eros.
+            <Bio>{bio}
             </Bio>
-        </div>
-
+        </article>
     )
 }
