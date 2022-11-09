@@ -1,8 +1,8 @@
-import {Main} from "./components/01_general/Main";
-import {Container} from "./components/01_general/Container";
-import {Header} from "./components/02_header/Header";
-import {SearchBar} from "./components/03_search bar/SearchBar";
-import {UserCard} from "./components/04_user-card/UserCard";
+import {Main} from "./components/common/Main";
+import {Container} from "./components/common/Container";
+import {Header} from "./components/header/Header";
+import {SearchBar} from "./components/search bar/SearchBar";
+import {UserCard} from "./components/user-card/UserCard";
 import {useEffect, useState} from "react";
 
 function App() {
